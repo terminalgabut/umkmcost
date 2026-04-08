@@ -1,8 +1,8 @@
 // Import view/halaman yang akan ditampilkan
 // Kita asumsikan file ini ada di folder js/views/
 const Dashboard = () => import('../views/Dashboard.js');
-const InputBiaya = () => import('../views/InputBiaya.js');
-const Laporan = () => import('../views/Laporan.js');
+//const InputBiaya = () => import('../views/InputBiaya.js');
+//const Laporan = () => import('../views/Laporan.js');
 
 const routes = [
     { 
@@ -11,7 +11,7 @@ const routes = [
         component: Dashboard,
         meta: { title: 'Dashboard' }
     },
-    { 
+   /* { 
         path: '/input', 
         name: 'input',
         component: InputBiaya,
@@ -22,7 +22,7 @@ const routes = [
         name: 'report',
         component: Laporan,
         meta: { title: 'Laporan Detail' }
-    },
+    }, */
     // Redirect jika route tidak ditemukan
     {
         path: '/:pathMatch(.*)*',
