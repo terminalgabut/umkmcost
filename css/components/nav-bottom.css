@@ -1,0 +1,75 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 1.5rem; /* Memberikan jarak dari bawah layar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2.5rem); /* Margin kiri kanan */
+    max-width: 420px;
+    height: 68px;
+    background-color: #1E293B; /* Slate gelap untuk kontras premium */
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.5rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #94A3B8;
+    text-decoration: none;
+    flex: 1;
+    height: 100%;
+    transition: color 0.2s ease;
+}
+
+.nav-item i {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+}
+
+.nav-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* State Aktif */
+.nav-item.router-link-active {
+    color: #FFFFFF;
+}
+
+.nav-item.router-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+}
+
+/* Efek khusus untuk tombol tambah (tengah) */
+.nav-item-center {
+    background-color: var(--primary);
+    color: white !important;
+    width: 50px;
+    height: 50px;
+    flex: none;
+    border-radius: 16px;
+    margin-top: -30px; /* Menonjol ke atas */
+    box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+}
+
+.nav-item-center i {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
