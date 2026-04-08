@@ -1,27 +1,35 @@
 // root/components/layout.js
 
-import HeaderComponent from './headerLogic.js';
-import NavComponent from './navigationLogic.js';
+import layoutView from './layoutView.js';
+import Header from './headeLogic.js';
+import Navigation from './navigationLogic.js'; // Mengganti Sidebar dengan Navigation
 
 export default {
-    name: 'LayoutView',
+    ...layoutView,
     components: {
-        'header-component': HeaderComponent,
-        'nav-component': NavComponent
+        'header-component': Header,
+        'nav-component': Navigation
     },
-    template: `
-    <div class="app-container">
-        <header-component></header-component>
-        
-        <main class="app-main">
-            <router-view v-slot="{ Component }">
-                <transition name="page-fade" mode="out-in">
-                    <component :is="Component" />
-                </transition>
-            </router-view>
-        </main>
+    setup() {
+        // Logika state sidebar dihapus karena sudah menggunakan Bottom Nav
+        return {};
+    },
+    watch: {
+        // Setiap kali pindah halaman
+        '$route'() {
+            // Pastikan scroll kembali ke atas saat ganti halaman
+            window.scrollTo(0, 0);
 
-        <nav-component></nav-component>
-    </div>
-    `
+            // Refresh icon Lucide agar muncul di halaman baru
+            Vue.nextTick(() => {
+                if (window.lucide) window.lucide.createIcons();
+            });
+        }
+    },
+    mounted() {
+        // Inisialisasi awal ikon Lucide
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
 };
