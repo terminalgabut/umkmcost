@@ -1,0 +1,92 @@
+/* --- APP SHELL --- */
+
+/* Wrapper utama untuk membatasi lebar di desktop tapi full di mobile */
+.app-container {
+    max-width: 480px; /* Ukuran maksimal layar HP */
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-main);
+    position: relative;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Header yang tetap di atas */
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px border var(--border-color);
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Area konten yang bisa di-scroll */
+.app-main {
+    flex: 1;
+    padding: 1.25rem;
+    padding-bottom: 100px; /* Jarak agar tidak tertutup Bottom Nav */
+}
+
+/* Card Section untuk pengelompokan input */
+.content-section {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Bottom Navigation (Floating Style) */
+.bottom-nav {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 3rem);
+    max-width: 400px;
+    background-color: var(--text-main); /* Dark theme untuk nav agar kontras premium */
+    border-radius: 2rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+/* Item di dalam Bottom Nav */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active {
+    color: white;
+}
+
+.nav-item i {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+/* Grid helper untuk input detail */
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 0.75rem;
+    align-items: center;
+}
