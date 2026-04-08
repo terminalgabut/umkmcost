@@ -2,7 +2,7 @@
 <html lang="id" data-theme="light">
 <head>  
     <meta charset="UTF-8">  
-    <title>UMKM COST CALC</title>   
+    <title>UMKM COST PRO</title>   
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,23 +13,30 @@
     <link rel="stylesheet" href="css/main.css">
 
     <style>
-        body { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-        .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
-        input { font-size: 16px !important; }
+        /* Base Setup */
+        body { 
+            touch-action: manipulation; 
+            -webkit-tap-highlight-color: transparent;
+            background-color: #F8FAFC; 
+        }
         
-        /* vConsole custom position agar tidak menutupi Bottom Nav */
+        /* Mencegah zoom otomatis pada input di iOS */
+        input { font-size: 16px !important; }
+
+        /* Posisi vConsole agar tidak menutupi Navigasi */
         #__vconsole .vc-switch {
-            bottom: 100px !important;
-            right: 10px !important;
-            opacity: 0.6;
+            bottom: 110px !important;
+            right: 15px !important;
+            opacity: 0.4;
         }
     </style>
 </head>
-<body class="bg-base-200 min-h-screen font-sans">
+<body class="min-h-screen font-sans">
 
     <div id="app"> 
-        <div class="flex items-center justify-center h-screen">
+        <div class="flex flex-col items-center justify-center h-screen">
             <span class="loading loading-spinner loading-lg text-primary"></span>
+            <p class="mt-4 text-xs font-bold text-slate-400 uppercase tracking-widest">Inisialisasi Sistem...</p>
         </div>
     </div> 
 
@@ -37,16 +44,15 @@
     <script>var vConsole = new window.VConsole();</script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    
     <script src="https://unpkg.com/vue-demi"></script>
-    
     <script src="https://unpkg.com/pinia@2.1.7/dist/pinia.iife.js"></script>
-    
     <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <script type="module" src="js/app.js"></script> 
+    <script type="module" src="js/app.js?v=1.0.1"></script> 
+
 </body>
 </html>
