@@ -1,25 +1,27 @@
 // root/components/layout.js
 
-import HeaderView from './header.js';
-import NavView from './navigation.js';
+import HeaderComponent from './header.js';
+import NavComponent from './navigation.js';
 
 export default {
+    name: 'LayoutView',
     components: {
-        HeaderView,
-        NavView
+        'header-component': HeaderComponent,
+        'nav-component': NavComponent
     },
     template: `
     <div class="app-container">
-        <header-view />
-
-        <main class="app-main pt-20"> <router-view v-slot="{ Component }">
-                <transition name="fade" mode="out-in">
+        <header-component></header-component>
+        
+        <main class="app-main">
+            <router-view v-slot="{ Component }">
+                <transition name="page-fade" mode="out-in">
                     <component :is="Component" />
                 </transition>
             </router-view>
         </main>
 
-        <nav-view />
+        <nav-component></nav-component>
     </div>
     `
 };
