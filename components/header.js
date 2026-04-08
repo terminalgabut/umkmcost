@@ -1,3 +1,5 @@
+// root/components/header.js
+
 export default {
     name: 'HeaderView',
     template: `
