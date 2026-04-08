@@ -1,7 +1,7 @@
 // root/components/layout.js
 
-import HeaderComponent from './header.js';
-import NavComponent from './navigation.js';
+import HeaderComponent from './headerLogic.js';
+import NavComponent from './navigationLogic.js';
 
 export default {
     name: 'LayoutView',
