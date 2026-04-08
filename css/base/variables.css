@@ -1,0 +1,25 @@
+/* css/base/variables.css */
+
+:root {
+    /* --- White & Grey Palette --- */
+    --bg-main: #F8FAFC;           /* Putih keabu-abuan sangat lembut */
+    --bg-card: #FFFFFF;           /* Putih murni untuk kontainer */
+    --text-main: #1E293B;         /* Slate gelap untuk teks utama */
+    --text-muted: #64748B;        /* Slate medium untuk deskripsi */
+    
+    /* --- Soft Premium Accents --- */
+    --primary: #4F46E5;           /* Indigo modern */
+    --primary-soft: #EEF2FF;      /* Indigo sangat muda untuk background icon */
+    --secondary: #0EA5E9;         /* Sky blue untuk variasi */
+    --accent: #F59E0B;            /* Amber untuk highlight biaya penting */
+    
+    /* --- Status Colors --- */
+    --success: #10B981;
+    --error: #EF4444;
+    --border-color: #E2E8F0;      /* Abu-abu terang untuk garis pemisah */
+
+    /* --- Shadows & Radii --- */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --radius-lg: 1rem;            /* Corner bulat yang modern */
+}
