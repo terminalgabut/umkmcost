@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>  
+    <meta charset="UTF-8">  
+    <title>UMKM COST CALC</title>   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">   
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        /* Optimasi untuk HP */
+        body {
+            touch-action: manipulation; /* Menghilangkan delay tap di beberapa browser mobile */
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .safe-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        /* Input styling agar nyaman di jempol */
+        input {
+            font-size: 16px !important; /* Mencegah auto-zoom di iOS */
+        }
+    </style>
+</head>
+<body class="bg-base-200 min-h-screen font-sans">
+
+    <div id="app"> 
+        <div class="flex items-center justify-center h-screen">
+            <span class="loading loading-spinner loading-lg text-primary"></span>
+        </div>
+    </div> 
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+    <script src="https://unpkg.com/vue-demi"></script>
+    <script src="https://unpkg.com/pinia"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script type="module" src="js/app.js"></script> 
+    <script>var vConsole = new window.VConsole();</script>
+ 
+</body>
+</html>
